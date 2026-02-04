@@ -10,7 +10,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Menu, X, MapPin, Clock } from "lucide-react";
 
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663040809690/KDuqyCIlvSvWxDhL.png";
+const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663040809690/nbRtIjeptQaEyZtr.png";
 const PHONE_NUMBER = "+61 422 249 279";
 const EMAIL = "ashpuri765@yahoo.com";
 const ADDRESS = "Dandenong North, Melbourne, VIC, Australia";
@@ -78,12 +78,16 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-start gap-3 group">
               <img 
                 src={LOGO_URL} 
                 alt="Ash Plumbing Services" 
                 className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
               />
+              <div className="flex flex-col justify-center">
+                <span className="font-display font-bold text-xl text-charcoal leading-tight">Ash Plumbing Services</span>
+                <span className="text-sm text-muted-foreground font-medium">Licensed Plumber in Dandenong North</span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -178,11 +182,17 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <img 
-                src={LOGO_URL} 
-                alt="Ash Plumbing Services" 
-                className="h-16 w-auto object-contain mb-4 brightness-0 invert"
-              />
+              <div className="flex items-start gap-3 mb-4">
+                <img 
+                  src={LOGO_URL} 
+                  alt="Ash Plumbing Services" 
+                  className="h-16 w-auto object-contain"
+                />
+                <div className="flex flex-col justify-center">
+                  <span className="font-display font-bold text-xl text-white leading-tight">Ash Plumbing Services</span>
+                  <span className="text-sm text-gray-300 font-medium">Licensed Plumber in Dandenong North</span>
+                </div>
+              </div>
               <p className="text-gray-300 mb-4 max-w-md leading-relaxed">
                 Your trusted licensed plumber in Dandenong North, Melbourne. We provide reliable, professional plumbing services with upfront pricing and quality workmanship.
               </p>
